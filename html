@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><link href="https://fonts.googleapis.com/css2?family=Huova+Serif:wght@100;700;900&amp;family=Exo+2:wght@300;400;600;800&amp;family=Playfair+Display:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Imersão In-Pulso - Recife 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#eba813",
+                        secondary: "#1E293B",
+                        "background-light": "#F9F9F9",
+                        "background-dark": "#0F172A",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "text-body-light": "#2D2D2D",
+                        "text-heading-light": "#0F172A",
+                        "whatsapp": "#25D366",
+                    },
+                    fontFamily: {
+                        display: ["Huova Serif", "serif"], 
+                        sans: ["Exo 2", "sans-serif"],
+                    },
+                    animation: {
+                        'pulse-subtle': 'pulse-subtle 3s infinite',
+                        'cta-pulse': 'cta-pulse 2s infinite',
+                        'shine': 'shine 0.75s',
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-slide-up': 'fadeSlideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+                    },
+                    keyframes: {
+                        'pulse-subtle': {
+                            '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)' },
+                            '50%': { transform: 'scale(1.05)', boxShadow: '0 0 0 10px rgba(37, 211, 102, 0)' },
+                        },
+                        'cta-pulse': {
+                            '0%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(235, 168, 19, 0.7)' },
+                            '70%': { transform: 'scale(1.03)', boxShadow: '0 0 0 10px rgba(235, 168, 19, 0)' },
+                            '100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(235, 168, 19, 0)' },
+                        },
+                        'fadeSlideUp': {
+                            '0%': { opacity: '0', transform: 'translateY(40px) scale(1.15)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1.15)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #FFC107, #D97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFC107;
+        }
+        .icon-box {
+            background-color: #F1F5F9;color: #334155;
+        }
+        .dark .icon-box {
+            background-color: #334155;color: #E2E8F0;
+        }.reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }.reveal-group .reveal-child {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-group.is-visible .reveal-child {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-group.is-visible .reveal-child:nth-child(1) { transition-delay: 0.1s; }
+        .reveal-group.is-visible .reveal-child:nth-child(2) { transition-delay: 0.2s; }
+        .reveal-group.is-visible .reveal-child:nth-child(3) { transition-delay: 0.3s; }
+        .reveal-group.is-visible .reveal-child:nth-child(4) { transition-delay: 0.4s; }
+        .reveal-group.is-visible .reveal-child:nth-child(5) { transition-delay: 0.5s; }.hero-animate-in {
+            animation: slideUpFade 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .hero-delay-1 { animation-delay: 0.2s; }
+        .hero-delay-2 { animation-delay: 0.4s; }
+        .hero-delay-3 { animation-delay: 0.6s; }
+        @keyframes slideUpFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .parallax-bg {
+            transform: translateZ(0);will-change: transform;
+        }
+        .countdown-item {
+            position: relative;
+        }
+        .countdown-item:not(:last-child)::after {
+            content: ':';
+            position: absolute;
+            right: -1rem;
+            top: 20%;
+            font-size: 2.5rem;
+            color: #2D2D2D;font-weight: 300;
+        }
+        .dark .countdown-item:not(:last-child)::after {
+            color: #475569;
+        }
+        @media (min-width: 1024px) {
+            .countdown-item:not(:last-child)::after {
+                right: -2rem;
+                font-size: 4rem;
+            }
+        }.btn-metallic-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-metallic-shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.6),
+                transparent
+            );
+            transition: all 0.6s;
+            transform: skewX(-20deg);
+        }
+        .btn-metallic-shine:hover::before {
+            left: 100%;
+            transition: 0.7s;
+        }
+        .schedule-card-glass {
+            background: rgba(255, 255, 255, 0.7);backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);}
+        .dark .schedule-card-glass {
+             background: rgba(15, 23, 42, 0.6);
+             border: 1px solid rgba(255, 193, 7, 0.15);
+             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .schedule-card-glass:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);border-color: rgba(255, 193, 7, 0.4);}
+        .dark .schedule-card-glass:hover {
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.15);
+            border-color: rgba(255, 193, 7, 0.4);
+        }
+        .social-circle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(45, 45, 45, 0.05);border: 1px solid rgba(45, 45, 45, 0.1);
+            color: #2D2D2D;
+            transition: all 0.3s ease;
+        }
+        .dark .social-circle-btn {
+            background: rgba(15, 23, 42, 0.4);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+        .social-circle-btn:hover {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: rgba(255, 193, 7, 0.5);
+            color: #FFC107;
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+        }
+        .hero-social-bar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .dark .hero-social-bar {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: none;
+        }
+        .hero-social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #FFC107;
+            color: #FFC107;
+            background: rgba(255, 193, 7, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.15);
+        }
+        .hero-social-icon:hover {
+            background: #FFC107;
+            color: #0F172A;
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
+            transform: translateY(-2px) scale(1.05);
+            border-color: #F59E0B;
+        }.modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 1rem;
+        }
+        .modal.is-open {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            background: #F9F9F9;border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 1.5rem;
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            color: #2D2D2D;}
+        @media (min-width: 768px) {
+            .modal-content {
+                flex-direction: row;
+                height: 80vh;max-height: 800px;
+            }
+        }
+        .dark .modal-content {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 193, 7, 0.25);
+            color: white;
+            box-shadow: 0 0 40px rgba(255, 193, 7, 0.1);
+        }
+        .modal.is-open .modal-content {
+            transform: scale(1);
+        }
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 193, 7, 0.1);
+            color: #FFC107;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.2s;
+        }
+        .modal-close:hover {
+            background: #FFC107;
+            color: #0F172A;
+            transform: rotate(90deg);
+        }
+        .modal-image-container {
+             flex-shrink: 0;
+             position: relative;
+        }
+        @media (min-width: 768px) {
+            .modal-image-container {
+                width: 45%;aspect-ratio: 4/5;
+                height: 100%; 
+            }statistics
+            .modal-image-container img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top center; 
+            }
+        }
+        @media (max-width: 767px) {
+            .modal-image-container {
+                width: 100%;
+                height: 350px;}
+        }
+    
+        @keyframes hero3DEntry {
+            0% {
+                opacity: 0;
+                transform: scale(0.9) perspective(1000px) rotateY(15deg) translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.1) perspective(1000px) rotateY(0deg) translateY(0);
+            }
+        }
+        .hero-3d-entry {
+            animation: hero3DEntry 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            transform-origin: bottom center;
+            will-change: transform, opacity;
+        }
+    
+        @keyframes pulse-continuous {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-continuous {
+            animation: pulse-continuous 2s infinite ease-in-out;
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">(function() {
+        const container = document.getElementById('three-js-canvas');
+        if (!container) return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        const group = new THREE.Group();
+        scene.add(group);
+
+        const particlesCount = 1200; 
+        const particlesGeometry = new THREE.BufferGeometry();
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for(let i=0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 12;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.035,
+            color: '#eba813',
+            transparent: true,
+            opacity: 0.5
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        group.add(particlesMesh);
+
+        camera.position.z = 6;
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / 300;
+            mouseY = (e.clientY - window.innerHeight / 2) / 300;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            group.rotation.y += 0.0002;
+            group.rotation.x += 0.0001;
+            
+            camera.position.x += (mouseX*0.15 - camera.position.x) * 0.015;
+            camera.position.y += (-mouseY*0.15 - camera.position.y) * 0.015;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        const tl = gsap.timeline({ delay: 0.5 });
+        tl.to('#hero-content > *', { opacity: 1, y: 0, duration: 1.2, stagger: 0.2, ease: 'power4.out', startAt: { y: 40 } });
+    })();</script></head>
+<body class="bg-background-light dark:bg-background-dark text-text-body-light dark:text-slate-200 font-sans transition-colors duration-300 relative selection:bg-primary/30">
+<div class="modal" id="modal-roberto">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-roberto')">
+<span class="material-icons">close</span>
+</button>
+<div class="modal-image-container">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-black/80"></div>
+<img alt="Dr. Roberto Almeida" class="w-full h-full object-cover grayscale brightness-90 contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2XXU2cfqeNaW8xhGNGj8KsX7qzBNKDzhRVsuE9T-WwpnED5O-m3m2rRB6jUE5lzScEDE29M5bZ8ytANAipJl25kg7jFL8K5XQLpPYU_6E2BfuX16ZYOVtl45mrPAgaczi4AUgmMfcpuyhmdm7SjDPPxyi_5HT-RXelnNoknJFU13H6W4UHxlZfQyjIOcPKjTwczG0-xhMYk4Uz5YYItE_ZrzL4UzmDYv6y5jGZdOX5oYOQcCOCsYhxvIc3cJ7zMKBtS4QapzPkQ"/>
+</div>
+<div class="flex-1 p-8 md:p-12 overflow-y-auto custom-scrollbar">
+<div class="md:max-w-xl">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-4 border border-primary/20">Neurociência</span>
+<h3 class="font-display text-3xl md:text-5xl text-text-heading-light dark:text-white mb-2 tracking-tight leading-tight font-thin">Dr. Roberto Almeida</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium mb-8 uppercase tracking-wide text-sm border-l-2 border-primary pl-3 font-sans font-light leading-relaxed">PhD em Neurobiologia Comportamental</p>
+<div class="prose dark:prose-invert prose-sm md:prose-base text-text-body-light dark:text-slate-300 font-normal leading-relaxed">
+<p class="mb-4 font-sans font-light leading-relaxed">Referência nacional em neuroplasticidade aplicada ao desenvolvimento humano, Dr. Roberto Almeida dedicou as últimas duas décadas ao estudo de como o cérebro processa mudanças de hábito e traumas.</p>
+<p class="mb-4 font-sans font-light leading-relaxed">Autor de 3 best-sellers sobre inteligência biológica, ele traz para a Imersão In-Pulso uma abordagem raramente vista fora dos laboratórios de ponta: a capacidade de intervir na arquitetura neural para facilitar novas escolhas.</p>
+<h4 class="font-bold text-text-heading-light dark:text-white mt-8 mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">Formação &amp; Experiência</h4>
+<ul class="list-none space-y-3 pl-0">
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Doutorado pela Universidade de São Paulo (USP)</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Pós-Doutorado em Neurociência Cognitiva (King's College London)</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Consultor de performance para atletas olímpicos</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Fundador do Instituto Brasileiro de Neuroperformance</li>
+</ul>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
+<p class="italic text-slate-500 text-lg font-serif font-sans font-light leading-relaxed">"Não somos reféns da nossa genética. O cérebro foi feito para mudar, basta darmos o estímulo correto."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="modal-helena">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-helena')">
+<span class="material-icons">close</span>
+</button>
+<div class="modal-image-container">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-black/80"></div>
+<img alt="Dra. Helena Costa" class="w-full h-full object-cover grayscale brightness-90 contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+</div>
+<div class="flex-1 p-8 md:p-12 overflow-y-auto custom-scrollbar">
+<div class="md:max-w-xl">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-4 border border-primary/20">Psicologia Comportamental</span>
+<h3 class="font-display text-3xl md:text-5xl text-text-heading-light dark:text-white mb-2 tracking-tight leading-tight font-thin">Dra. Helena Costa</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium mb-8 uppercase tracking-wide text-sm border-l-2 border-primary pl-3 font-sans font-light leading-relaxed">Especialista em Trauma e Apego</p>
+<div class="prose dark:prose-invert prose-sm md:prose-base text-text-body-light dark:text-slate-300 font-normal leading-relaxed">
+<p class="mb-4 font-sans font-light leading-relaxed">Com uma visão integrativa que une a psicologia clínica tradicional a abordagens somáticas, Dra. Helena Costa é pioneira no tratamento de bloqueios emocionais profundos. Sua metodologia foca em criar segurança interna para permitir a vulnerabilidade necessária à mudança.</p>
+<p class="mb-4 font-sans font-light leading-relaxed">Na imersão, ela guiará os processos de "limpeza emocional", ajudando os participantes a acessarem e ressignificarem memórias que operam no inconsciente, sabotando o sucesso presente.</p>
+<h4 class="font-bold text-text-heading-light dark:text-white mt-8 mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">Formação &amp; Experiência</h4>
+<ul class="list-none space-y-3 pl-0">
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Mestrado em Psicologia Clínica (PUC-RJ)</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Certificação Internacional em Somatic Experiencing®</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Especialização em Terapia do Esquema</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Mais de 5.000 horas de atendimento clínico</li>
+</ul>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
+<p class="italic text-slate-500 text-lg font-serif font-sans font-light leading-relaxed">"A cura acontece quando o corpo se sente seguro o suficiente para soltar o que a mente segurou por anos."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" id="modal-carlos">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-carlos')">
+<span class="material-icons">close</span>
+</button>
+<div class="modal-image-container">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-black/80"></div>
+<img alt="Carlos Mendez" class="w-full h-full object-cover grayscale brightness-90 contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fGZb1fxdZiofoN8Iq_0JKUo6ZmXAa6VlaZZAgQvopes7FvBrR81XhaOXSD1fcnAdn4k-1F2iyqjnUVJSos3G4B75LMyj9T6sJUJ0qErOvQABIgTQt4k40cm4BBw8aMNyuXkyO8NZZou4RhBkA2TbArGlfZjgqZDjcMq9uSFhO_xN9N47xmI47Knqk941fin2rq37xeGrD53YFZbdzzx9MkEvaXlotu6MUYt5i-KEjaUxbgJyxdAoGwLhFiLdxY1NkHnOUWvIMH4"/>
+</div>
+<div class="flex-1 p-8 md:p-12 overflow-y-auto custom-scrollbar">
+<div class="md:max-w-xl">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-4 border border-primary/20">Alta Performance</span>
+<h3 class="font-display text-3xl md:text-5xl text-text-heading-light dark:text-white mb-2 tracking-tight leading-tight font-thin">Carlos Mendez</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium mb-8 uppercase tracking-wide text-sm border-l-2 border-primary pl-3 font-sans font-light leading-relaxed">Master Trainer em PNL &amp; Coach Executivo</p>
+<div class="prose dark:prose-invert prose-sm md:prose-base text-text-body-light dark:text-slate-300 font-normal leading-relaxed">
+<p class="mb-4 font-sans font-light leading-relaxed">Carlos Mendez não acredita em teorias que não viram prática na segunda-feira de manhã. Reconhecido por sua energia contagiante e pragmatismo, ele treinou executivos da Fortune 500 em comunicação influente e liderança adaptativa.</p>
+<p class="mb-4 font-sans font-light leading-relaxed">Sua missão no In-Pulso é garantir a "aterrissagem": transformar os insights emocionais e neurais em um plano de ação estratégico, utilizando ferramentas avançadas de Programação Neurolinguística para modelar a excelência.</p>
+<h4 class="font-bold text-text-heading-light dark:text-white mt-8 mb-4 text-lg border-b border-gray-200 dark:border-gray-700 pb-2">Formação &amp; Experiência</h4>
+<ul class="list-none space-y-3 pl-0">
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Certified Master Practitioner em PNL (The Society of NLP)</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> MBA em Gestão Estratégica de Pessoas</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Treinador Comportamental com atuação em 12 países</li>
+<li class="flex items-start"><span class="material-icons text-primary text-sm mt-1 mr-2 font-sans font-light">check_circle</span> Criador do método "Arquitetura da Ação"</li>
+</ul>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
+<p class="italic text-slate-500 text-lg font-serif font-sans font-light leading-relaxed">"Insight sem ação é apenas entretenimento intelectual. Vamos construir resultados."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-icons text-primary text-3xl">bolt</span>
+<span class="font-display text-xl uppercase tracking-wider text-text-heading-light dark:text-white font-thin">Imersão In-Pulso</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#hero" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">Início</a>
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#why-hard" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">O Desafio</a>
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#target-audience" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">Para Quem</a>
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#speakers" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">Mentores</a>
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#program" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">O Que É</a>
+<a class="text-sm font-medium hover:text-primary text-text-body-light dark:text-slate-300 transition-colors uppercase text-xs tracking-[0.2em] font-bold whitespace-nowrap" href="#schedule" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">Programação</a>
+<button aria-label="Toggle Dark Mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 transition-colors focus:outline-none" id="theme-toggle">
+<span class="material-icons dark:hidden text-text-body-light">dark_mode</span>
+<span class="material-icons hidden dark:block text-yellow-400">light_mode</span>
+</button>
+<a class="btn-metallic-shine bg-primary text-slate-900 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all shadow-lg shadow-yellow-500/20 animate-cta-pulse whitespace-nowrap px-4" href="#cta" style="font-family: 'Huova Serif', serif; letter-spacing: 0.1em;">Inscreva-se Agora</a>
+</div>
+<div class="md:hidden flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 transition-colors focus:outline-none" id="theme-toggle-mobile">
+<span class="material-icons dark:hidden text-text-body-light">dark_mode</span>
+<span class="material-icons hidden dark:block text-yellow-400">light_mode</span>
+</button>
+<button class="text-text-body-light dark:text-white hover:text-primary focus:outline-none mobile-menu-trigger">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-[60] flex items-center justify-center w-16 h-16 bg-whatsapp rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-subtle hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group" href="https://wa.me/" target="_blank">
+<i class="fab fa-whatsapp text-white text-4xl group-hover:scale-110 transition-transform"></i>
+</a>
+<section class="relative w-full h-screen min-h-[600px] lg:aspect-video bg-[#001a33] overflow-hidden flex items-center justify-center" id="hero"><!-- Three.js Canvas Container -->
+<div class="absolute inset-0 z-0" id="three-container"><div class="absolute top-1/4 right-0 w-[50%] h-[100%] bg-primary/10 blur-[150px] rounded-full pointer-events-none animate-pulse" style="animation-duration: 10s; transform: rotate(45deg);"></div>
+<div class="absolute -bottom-1/4 -left-1/4 w-[80%] h-[80%] bg-blue-400/5 blur-[250px] rounded-full pointer-events-none animate-pulse" style="animation-duration: 15s;"></div>
+<div class="absolute inset-0 z-0 select-none pointer-events-none flex items-center justify-center overflow-hidden">
+<span class="text-[10vw] lg:text-[12vw] font-display uppercase tracking-tight text-white/[0.015] whitespace-nowrap block w-full text-center scale-90 lg:scale-100">imersão in-pulso</span>
+</div>
+<div class="absolute inset-0 z-10" id="three-js-canvas"></div>
+</div>
+<!-- Cinematic Glows/Flares -->
+<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 blur-[180px] rounded-full pointer-events-none animate-pulse" style="animation-duration: 8s;"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-blue-500/10 blur-[200px] rounded-full pointer-events-none animate-pulse" style="animation-duration: 12s;"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-transparent via-[#001a33]/50 to-[#001a33] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full relative z-20 flex flex-col items-center justify-center gap-12">
+<!-- Content: Centered -->
+<div class="w-full text-center max-w-4xl" id="hero-content">
+<div class="inline-flex items-center justify-center gap-3 mb-8 opacity-0">
+<div class="h-px w-8 bg-primary"></div>
+<span class="font-sans text-[12px] md:text-sm uppercase tracking-[0.4em] font-bold text-primary">
+                16, 17 e 18 de Maio 2026 | Recife - Gravatá
+            </span>
+<div class="h-px w-8 bg-primary"></div>
+</div>
+<h2 class="font-display text-5xl md:text-7xl lg:text-9xl tracking-tighter text-white leading-[0.85] mb-10 uppercase font-thin opacity-0 transition-all duration-500 hover:text-glow cursor-default text-balance">
+            IMERSÃO <br/> <span class="text-primary font-normal">IN-PULSO</span>
+</h2>
+<p class="font-sans text-gray-300 text-lg md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed opacity-0">
+            A jornada definitiva para reconfigurar seus padrões mentais através da neurociência aplicada e alta performance.
+        </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0"><button class="btn-metallic-shine bg-primary text-slate-900 font-bold py-5 px-12 rounded-xl transition-all uppercase tracking-widest text-sm shadow-[0_0_40px_rgba(235,168,19,0.3)] hover:scale-105 animate-pulse-continuous">
+                GARANTIR MINHA VAGA
+            </button></div>
+</div>
+</div>
+<!-- Social Sidebar -->
+<div class="absolute top-1/2 -translate-y-1/2 left-6 hidden xl:flex flex-col gap-8 z-40">
+<a class="text-white/30 hover:text-primary transition-all duration-300" href="#"><i class="fab fa-instagram text-xl"></i></a>
+<a class="text-white/30 hover:text-primary transition-all duration-300" href="#"><i class="fab fa-linkedin-in text-xl"></i></a>
+<a class="text-white/30 hover:text-primary transition-all duration-300" href="#"><i class="fab fa-facebook-f text-xl"></i></a>
+</div></section><section class="bg-gray-950 text-gray-300 border-b border-gray-900 relative z-20 font-sans">
+<div class="border-b border-gray-900 bg-gray-950/50 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4 overflow-x-auto">
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Realização</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Realização" class="footer-partner-logo h-12 w-auto object-contain grayscale dark:invert" src="{{DATA:IMAGE:REALIZACAO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Organização</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Organização" class="footer-partner-logo h-12 w-auto object-contain grayscale dark:invert" src="{{DATA:IMAGE:ORGANIZACAO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Apoio Técnico</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Apoio Técnico" class="footer-partner-logo h-12 w-auto object-contain grayscale dark:invert" src="{{DATA:IMAGE:APOIO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Incentivadores</span>
+<div class="flex gap-4">
+<div class="h-16 w-32 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Incentivador 1" class="footer-partner-logo h-12 w-auto object-contain grayscale dark:invert" src="{{DATA:IMAGE:INCENTIVADOR_1}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+<div class="h-16 w-32 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Incentivador 2" class="footer-partner-logo h-12 w-auto object-contain grayscale dark:invert" src="{{DATA:IMAGE:INCENTIVADOR_2}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-16 lg:py-24 bg-background-light dark:bg-background-dark border-y border-gray-200 dark:border-gray-800 transition-colors duration-500 overflow-hidden" id="experience-intro">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+<!-- Text Content -->
+<div class="w-full lg:w-3/5 reveal-on-scroll">
+<div class="relative">
+<!-- Decorative element -->
+<div class="absolute -left-4 -top-4 w-12 h-12 border-l-2 border-t-2 border-primary/30 opacity-50"></div>
+<h3 class="font-display text-4xl lg:text-6xl leading-[1.1] mb-8 tracking-tight text-text-heading-light dark:text-white font-thin">
+                        É uma experiência para mudar o <span class="text-primary font-normal">jeito como você funciona.</span>
+</h3>
+<div class="flex items-center gap-4">
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="font-sans text-xs uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500 font-bold">Metodologia In-Pulso</p>
+</div>
+</div>
+</div>
+<!-- Image Container -->
+<div class="w-full lg:w-2/5 flex justify-center lg:justify-end reveal-on-scroll">
+<div class="relative group">
+<!-- Background Glow -->
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75 group-hover:scale-100 transition-transform duration-700"></div>
+<!-- The Image -->
+<div class="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+<img alt="Experiência de Transformação" class="w-full max-w-[400px] h-auto object-cover grayscale brightness-90 contrast-110 group-hover:grayscale-0 transition-all duration-700" src="{{DATA:IMAGE:IMAGE_25}}"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- Floating element -->
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-xl z-20 hidden lg:block animate-float"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Patterns -->
+<div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23eba813\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+</section><div class="bg-background-light dark:bg-background-dark reveal-on-scroll">
+<div class="relative w-full h-px max-w-2xl mx-auto px-4">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[1px] opacity-40 shadow-[0_0_12px_rgba(235,168,19,0.4)]"></div>
+</div>
+</div>
+<section class="bg-[#0F172A] relative overflow-hidden py-24 lg:py-32" id="why-hard">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/90 to-transparent z-10"></div>
+<img alt="Atmospheric background" class="w-full h-full object-cover opacity-30 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4D_H6Q4vZagB-big65i15eBcj33rdNrKO9ySf9wKa0ZY8xKFLJnmJw5ULHL8n-gyI02a3Lw-pzwRZ8lj03-E-IdYCyBSXmMMPBecoeYQ68pGKwg_98EbtQFsBl8zd5T68AuqXy2w3sarXlz5y9GfHud5iopo70USeaiXuGOZIMae1zRgaydMivxx7f4tsfnNTIiepQhyHl37ukHxMh6XJymB0Mcdbw30qZnESx3GxE3fXmFOwCzXpZVV7CMj2vL3UQMkpUHyDK5s"/>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:gap-12">
+<div class="relative reveal-on-scroll">
+<div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent z-10"></div>
+<img alt="Wooden blocks spelling CHANGE being rearranged" class="w-full h-auto object-cover rounded-xl border border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmu1R3aYiK_nWxoe7g7qGQlDWRt7ZlVImtfftbDGFOoAz7ezw_CJJMkzchbR0Nu8hsfB58Hu8r7SIf_Q63geFBpe5BxAYq8IGQQFBVzI77JSo-qOat6CUROB1i-Ugaj9U8pnujO9qdGpj8VD85bNAPbUy-uoZOjQmSsvKw2v5fuF0HZSdUuuYloqE2m0qKXIRnVAQFk-Iaei1yVFV1hxliwmPsooQZAYNR_MfxfbNb6-_Ycz_4yyBP_EWri_-eHg6vkua3wCTxkrQ"/>
+</div>
+</div>
+<div class="reveal-group">
+<h2 class="font-display text-3xl lg:text-5xl text-primary mb-8 md:mb-12 tracking-tight leading-tight reveal-child font-thin text-4xl lg:text-6xl text-balance">POR QUE <span class="text-white">MUDAR</span> É <br/> TÃO <span class="text-primary">DIFÍCIL?</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="reveal-child">
+<h4 class="text-primary font-bold text-lg mb-4 uppercase tracking-wide">A maioria das pessoas:</h4>
+<ul class="space-y-4 text-gray-300">
+<li class="flex items-start">
+<span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0 font-sans font-light"></span>
+<span class="font-sans font-light">entende o que precisa mudar;</span>
+</li>
+<li class="flex items-start">
+<span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0 font-sans font-light"></span>
+<span class="font-sans font-light">tem clareza intelectual;</span>
+</li>
+<li class="flex items-start">
+<span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0 font-sans font-light"></span>
+<span class="font-sans font-light">sabe o que não funciona mais.</span>
+</li>
+</ul>
+</div>
+<div class="reveal-child border-l border-white/10 pl-6 md:pl-8">
+<p class="text-white font-semibold text-lg mb-4 font-sans font-light leading-relaxed">Mesmo assim, repete padrões.</p>
+<p class="text-gray-400 text-sm leading-relaxed font-sans font-light">
+                            Isso acontece porque <span class="text-primary font-bold">mudanças reais</span> não acontecem apenas no nível consciente, mas:
+                        </p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-6 md:p-8 mb-8 reveal-child">
+<ul class="space-y-3">
+<li class="flex items-center text-gray-200">
+<span class="material-icons text-primary mr-3 text-sm font-sans font-light">radio_button_checked</span>
+                            na memória emocional,
+                        </li>
+<li class="flex items-center text-gray-200">
+<span class="material-icons text-primary mr-3 text-sm font-sans font-light">radio_button_checked</span>
+                            nos scripts de vida,
+                        </li>
+<li class="flex items-center text-gray-200">
+<span class="material-icons text-primary mr-3 text-sm font-sans font-light">radio_button_checked</span>
+                            nos sistemas automáticos do cérebro,
+                        </li>
+<li class="flex items-center text-gray-200">
+<span class="material-icons text-primary mr-3 text-sm font-sans font-light">radio_button_checked</span>
+                            nas crenças construídas ao longo da história pessoal e ancestral.
+                        </li>
+</ul>
+</div>
+<div class="reveal-child">
+<p class="text-lg md:text-xl font-medium text-white border-l-4 border-primary pl-4 font-sans font-light leading-relaxed">
+                        A Imersão In-Pulso atua exatamente nesses níveis.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section><div class="bg-background-light dark:bg-background-dark reveal-on-scroll">
+<div class="relative w-full h-px max-w-2xl mx-auto px-4">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[1px] opacity-40 shadow-[0_0_12px_rgba(235,168,19,0.4)]"></div>
+</div>
+</div>
+<section class="py-24 lg:py-32 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 relative transition-colors duration-300" id="target-audience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-16">
+<div class="lg:w-1/2 relative reveal-on-scroll">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl border border-gray-100 dark:border-gray-800 group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-70"></div>
+<img alt="Person in deep reflection looking away" class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-1000 transform scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU8PMj4RxC91qmy6HhGdTRxpxnr8tu2iHVFVJMGW9J-oGL8Jow8vu3GCCBUsorNIJTQNKCXtFrWgM_4Rp74Wq-HHPQH4sdeVDEsoDs2qzV5ad784lqnXmbodBJI7P_CpEZI-zbPAZ6gBLHLkbfxkKYvLRtIAFVAyaCa8lHPOzy_Si2R2m-0qK_SqlpnYld0r6setw3sObDtpIHyrCA5RhAVXB29nMhnCQgTaTpg_E3bf6ZNcV6kFL0lNEYU_HyQbkFKrkOkmjl_zY"/>
+<div class="absolute bottom-10 left-8 right-8 z-20">
+<div class="bg-black/60 backdrop-blur-md border border-primary/50 border-l-4 border-l-primary p-6 rounded-r-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<p class="font-display text-xl text-white tracking-wide font-thin font-sans font-light leading-relaxed">
+                                    "Não é para curiosos."
+                                </p>
+<p class="text-gray-300 text-sm mt-2 font-light font-sans font-light leading-relaxed">
+                                    É para quem está pronto para assumir o controle da própria narrativa.
+                                </p>
+</div>
+</div>
+</div>
+<div class="absolute -z-10 -top-6 -left-6 w-full h-full border border-primary/20 rounded-2xl hidden lg:block"></div>
+</div>
+<div class="lg:w-1/2 reveal-group">
+<div class="inline-flex items-center gap-2 mb-8">
+<div class="h-px w-12 bg-primary"></div>
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Perfil do Participante</span>
+</div>
+<h2 class="font-display text-3xl lg:text-6xl text-text-heading-light dark:text-white mb-8 md:mb-10 leading-tight tracking-tight uppercase font-thin text-balance">
+                    Para quem é a <br/>
+<span class="text-primary dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-primary dark:to-orange-500 tracking-tight">Imersão In-Pulso?</span>
+</h2>
+<div class="space-y-10">
+<div class="reveal-child flex gap-6 group">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-slate-400 dark:text-slate-500 group-hover:border-primary group-hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-xl">psychology_alt</span>
+</div>
+<div class="w-px h-full bg-gray-100 dark:bg-gray-800 mx-auto mt-2 group-last:hidden"></div>
+</div>
+<div>
+<h3 class="text-xl text-text-heading-light dark:text-white mb-2 tracking-premium group-hover:text-primary transition-colors duration-300 font-display font-thin">Profundidade Prática</h3>
+<p class="text-text-body-light dark:text-slate-400 text-base leading-relaxed font-light font-sans font-light">
+                                Para quem busca ir além da teoria rasa e quer ferramentas concretas aplicáveis no dia a dia.
+                            </p>
+</div>
+</div>
+<div class="reveal-child flex gap-6 group">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-slate-400 dark:text-slate-500 group-hover:border-primary group-hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+<div class="w-px h-full bg-gray-100 dark:bg-gray-800 mx-auto mt-2 group-last:hidden"></div>
+</div>
+<div>
+<h3 class="text-xl text-text-heading-light dark:text-white mb-2 tracking-premium group-hover:text-primary transition-colors duration-300 font-display font-thin">Presença e Verdade</h3>
+<p class="text-text-body-light dark:text-slate-400 text-base leading-relaxed font-light font-sans font-light">
+                                Para quem deseja viver com autenticidade real, despindo-se de máscaras sociais que não servem mais.
+                            </p>
+</div>
+</div>
+<div class="reveal-child flex gap-6 group">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-slate-400 dark:text-slate-500 group-hover:border-primary group-hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-xl">spa</span>
+</div>
+<div class="w-px h-full bg-gray-100 dark:bg-gray-800 mx-auto mt-2 group-last:hidden"></div>
+</div>
+<div>
+<h3 class="text-xl text-text-heading-light dark:text-white mb-2 tracking-premium group-hover:text-primary transition-colors duration-300 font-display font-thin">Evolução Interna</h3>
+<p class="text-text-body-light dark:text-slate-400 text-base leading-relaxed font-light font-sans font-light">
+                                Para quem entende que a mudança genuína acontece de dentro para fora, reconfigurando o "sistema operacional" interno.
+                            </p>
+</div>
+</div>
+<div class="reveal-child flex gap-6 group">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-slate-400 dark:text-slate-500 group-hover:border-primary group-hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-xl">change_circle</span>
+</div>
+</div>
+<div>
+<h3 class="text-xl text-text-heading-light dark:text-white mb-2 tracking-premium group-hover:text-primary transition-colors duration-300 font-display font-thin">Ponto de Virada</h3>
+<p class="text-text-body-light dark:text-slate-400 text-base leading-relaxed font-light font-sans font-light">
+                                Para quem sente que chegou o momento decisivo de transformar intenção em ação.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-background-light dark:bg-background-dark relative overflow-hidden transition-colors duration-300" id="speakers">
+<div class="absolute inset-0 bg-white/50 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-slate-800 dark:via-background-dark dark:to-black dark:opacity-40 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-20 reveal-on-scroll">
+<p class="text-primary font-bold tracking-[0.2em] uppercase mb-4 text-sm font-sans font-light leading-relaxed">Mentores</p>
+<h2 class="font-display text-4xl lg:text-5xl text-text-heading-light dark:text-white mb-6 tracking-premium-wide font-thin text-balance">Com quem você vai caminhar</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-20 reveal-on-scroll">
+<div class="w-full lg:w-5/12 relative group">
+<div class="absolute inset-0 bg-primary rounded-xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+<img alt="Dr. Roberto Almeida Portrait" class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700 border border-gray-200 dark:border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2XXU2cfqeNaW8xhGNGj8KsX7qzBNKDzhRVsuE9T-WwpnED5O-m3m2rRB6jUE5lzScEDE29M5bZ8ytANAipJl25kg7jFL8K5XQLpPYU_6E2BfuX16ZYOVtl45mrPAgaczi4AUgmMfcpuyhmdm7SjDPPxyi_5HT-RXelnNoknJFU13H6W4UHxlZfQyjIOcPKjTwczG0-xhMYk4Uz5YYItE_ZrzL4UzmDYv6y5jGZdOX5oYOQcCOCsYhxvIc3cJ7zMKBtS4QapzPkQ"/>
+</div>
+<div class="w-full lg:w-7/12">
+<h3 class="font-display text-3xl md:text-4xl text-text-heading-light dark:text-primary mb-2 transition-colors tracking-premium font-thin">Dr. Roberto Almeida</h3>
+<p class="text-lg text-slate-500 dark:text-slate-400 font-medium mb-6 uppercase tracking-wide font-sans font-light leading-relaxed">Neurocientista</p>
+<div class="space-y-4 text-text-body-light dark:text-slate-300 leading-relaxed font-normal text-lg">
+<p class="font-sans font-light leading-relaxed">Com mais de 20 anos de experiência clínica e acadêmica, o Dr. Roberto Almeida traduz a complexidade do cérebro humano em ferramentas práticas para mudança de comportamento. Sua abordagem única combina neuroplasticidade com técnicas de regulação emocional.</p>
+<p class="font-sans font-light leading-relaxed">Na Imersão In-Pulso, ele conduzirá as sessões de "Reengenharia Neural", onde os participantes aprenderão a identificar e reescrever os caminhos neurais que sustentam hábitos limitantes. Sua contribuição é fundamental para quem busca entender a biologia por trás das próprias decisões.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<a class="social-circle-btn" href="#" title="LinkedIn">
+<i class="fab fa-linkedin-in text-lg"></i>
+</a>
+<a class="social-circle-btn" href="#" title="Instagram">
+<i class="fab fa-instagram text-lg"></i>
+</a>
+</div>
+<div class="mt-6">
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors duration-300 uppercase tracking-wide group" onclick="openModal('modal-roberto')">
+                            Saiba Mais
+                            <span class="material-icons ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent mb-20"></div>
+<div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center mb-20 reveal-on-scroll">
+<div class="w-full lg:w-5/12 relative group">
+<div class="absolute inset-0 bg-primary rounded-xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+<img alt="Dra. Helena Costa Portrait" class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700 border border-gray-200 dark:border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+</div>
+<div class="w-full lg:w-7/12 lg:text-right">
+<h3 class="font-display text-3xl md:text-4xl text-text-heading-light dark:text-primary mb-2 transition-colors tracking-premium font-thin">Dra. Helena Costa</h3>
+<p class="text-lg text-slate-500 dark:text-slate-400 font-medium mb-6 uppercase tracking-wide font-sans font-light leading-relaxed">Psicóloga Comportamental</p>
+<div class="space-y-4 text-text-body-light dark:text-slate-300 leading-relaxed font-normal text-lg">
+<p class="font-sans font-light leading-relaxed">Especialista em traumas e desbloqueio emocional, a Dra. Helena traz uma visão compassiva mas firme sobre como nossas histórias passadas moldam nosso presente. Ela atua desarmando os mecanismos de defesa que impedem o crescimento genuíno.</p>
+<p class="font-sans font-light leading-relaxed">Durante a imersão, Helena facilitará vivências profundas focadas na criança interior e na ressignificação de memórias. Seu trabalho cria o solo fértil e seguro onde a transformação real pode acontecer, permitindo que você se liberte de pesos que não precisa mais carregar.</p>
+</div>
+<div class="mt-8 flex gap-4 lg:justify-end">
+<a class="social-circle-btn" href="#" title="LinkedIn">
+<i class="fab fa-linkedin-in text-lg"></i>
+</a>
+<a class="social-circle-btn" href="#" title="Instagram">
+<i class="fab fa-instagram text-lg"></i>
+</a>
+</div>
+<div class="mt-6 flex lg:justify-end">
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors duration-300 uppercase tracking-wide group" onclick="openModal('modal-helena')">
+                            Saiba Mais
+                            <span class="material-icons ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent mb-20"></div>
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center reveal-on-scroll">
+<div class="w-full lg:w-5/12 relative group">
+<div class="absolute inset-0 bg-primary rounded-xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+<img alt="Carlos Mendez Portrait" class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-700 border border-gray-200 dark:border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fGZb1fxdZiofoN8Iq_0JKUo6ZmXAa6VlaZZAgQvopes7FvBrR81XhaOXSD1fcnAdn4k-1F2iyqjnUVJSos3G4B75LMyj9T6sJUJ0qErOvQABIgTQt4k40cm4BBw8aMNyuXkyO8NZZou4RhBkA2TbArGlfZjgqZDjcMq9uSFhO_xN9N47xmI47Knqk941fin2rq37xeGrD53YFZbdzzx9MkEvaXlotu6MUYt5i-KEjaUxbgJyxdAoGwLhFiLdxY1NkHnOUWvIMH4"/>
+</div>
+<div class="w-full lg:w-7/12">
+<h3 class="font-display text-3xl md:text-4xl text-text-heading-light dark:text-primary mb-2 transition-colors tracking-premium font-thin">Carlos Mendez</h3>
+<p class="text-lg text-slate-500 dark:text-slate-400 font-medium mb-6 uppercase tracking-wide font-sans font-light leading-relaxed">Master Trainer em PNL</p>
+<div class="space-y-4 text-text-body-light dark:text-slate-300 leading-relaxed font-normal text-lg">
+<p class="font-sans font-light leading-relaxed">Carlos Mendez é reconhecido internacionalmente por sua habilidade de destravar potenciais latentes. Com uma carreira focada em alta performance, ele une a precisão da Programação Neurolinguística com uma abordagem prática e orientada para resultados imediatos.</p>
+<p class="font-sans font-light leading-relaxed">Ele trará para o In-Pulso técnicas avançadas de modelagem de excelência e comunicação assertiva. Carlos é a peça-chave para quem deseja transformar insights abstratos em planos de ação concretos, garantindo que a imersão gere resultados tangíveis na segunda-feira seguinte.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<a class="social-circle-btn" href="#" title="LinkedIn">
+<i class="fab fa-linkedin-in text-lg"></i>
+</a>
+<a class="social-circle-btn" href="#" title="Instagram">
+<i class="fab fa-instagram text-lg"></i>
+</a>
+</div>
+<div class="mt-6">
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-2 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors duration-300 uppercase tracking-wide group" onclick="openModal('modal-carlos')">
+                            Saiba Mais
+                            <span class="material-icons ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-background-light dark:bg-background-dark relative overflow-hidden transition-colors duration-300" id="program">
+<div class="absolute left-0 top-0 w-full h-full overflow-hidden pointer-events-none">
+<div class="absolute -left-20 top-40 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -right-20 bottom-40 w-96 h-96 bg-primary/5 dark:bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-12">
+<div class="sticky top-32 reveal-on-scroll lg:w-1/2">
+<div class="inline-flex items-center gap-2 mb-6">
+<div class="h-12 w-1 bg-primary rounded-full"></div>
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Metodologia Exclusiva</span>
+</div>
+<h2 class="font-display text-4xl lg:text-6xl text-text-heading-light dark:text-white mb-6 leading-tight tracking-tight font-thin text-balance">
+                        O QUE É A <br/>
+<span class="text-primary dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-primary dark:to-orange-500 tracking-tight">IMERSÃO IN-PULSO</span>
+</h2>
+<p class="text-text-body-light dark:text-slate-400 text-lg mb-8 leading-relaxed font-normal font-sans font-light">
+                        A Imersão In-Pulso é uma jornada vivencial desenhada para reconfigurar padrões profundos. Não é apenas teoria; é uma experiência prática de transformação.
+                    </p>
+<div class="border-l-2 border-slate-200 dark:border-slate-700 pl-6 py-2 mb-10">
+<p class="text-slate-500 dark:text-slate-500 italic font-medium font-sans font-light leading-relaxed">
+                            Integramos conhecimentos ancestrais e ciência moderna para criar um ambiente onde a mudança acontece de dentro para fora.
+                        </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Conduzido com:</span>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 border border-primary/30 text-primary bg-primary/5 rounded-full text-sm font-semibold">Segurança</span>
+<span class="px-4 py-2 border border-primary/30 text-primary bg-primary/5 rounded-full text-sm font-semibold">Ética</span>
+<span class="px-4 py-2 border border-primary/30 text-primary bg-primary/5 rounded-full text-sm font-semibold">Estrutura</span>
+</div>
+</div>
+</div>
+<div class="grid gap-5 reveal-group lg:w-1/2">
+<div class="reveal-child group bg-white dark:bg-card-dark p-6 rounded-xl shadow-sm hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 flex items-start gap-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors group-hover:bg-slate-200 dark:group-hover:bg-slate-600">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<div>
+<h3 class="text-lg text-text-heading-light dark:text-white mb-2 group-hover:text-primary transition-colors tracking-premium font-display font-thin">Neurociência Aplicada</h3>
+<p class="text-text-body-light dark:text-slate-400 text-sm leading-relaxed font-normal font-sans font-light">
+                                Entenda como seu cérebro cria hábitos e aprenda técnicas cientificamente comprovadas para reprogramar caminhos neurais.
+                            </p>
+</div>
+</div>
+<div class="reveal-child group bg-white dark:bg-card-dark p-6 rounded-xl shadow-sm hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 flex items-start gap-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors group-hover:bg-slate-200 dark:group-hover:bg-slate-600">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<div>
+<h3 class="text-lg text-text-heading-light dark:text-white mb-2 group-hover:text-primary transition-colors tracking-premium font-display font-thin">Programação Neurolinguística (PNL)</h3>
+<p class="text-text-body-light dark:text-slate-400 text-sm leading-relaxed font-normal font-sans font-light">
+                                Ferramentas poderosas para remodelar sua comunicação interna e externa, alterando a percepção da realidade.
+                            </p>
+</div>
+</div>
+<div class="reveal-child group bg-white dark:bg-card-dark p-6 rounded-xl shadow-sm hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 flex items-start gap-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors group-hover:bg-slate-200 dark:group-hover:bg-slate-600">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div>
+<h3 class="text-lg text-text-heading-light dark:text-white mb-2 group-hover:text-primary transition-colors tracking-premium font-display font-thin">Análise Transacional</h3>
+<p class="text-text-body-light dark:text-slate-400 text-sm leading-relaxed font-normal font-sans font-light">
+                                Mapeie seus estados de ego e compreenda as dinâmicas ocultas em seus relacionamentos.
+                            </p>
+</div>
+</div>
+<div class="reveal-child group bg-white dark:bg-card-dark p-6 rounded-xl shadow-sm hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 flex items-start gap-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors group-hover:bg-slate-200 dark:group-hover:bg-slate-600">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<div>
+<h3 class="text-lg text-text-heading-light dark:text-white mb-2 group-hover:text-primary transition-colors tracking-premium font-display font-thin">Consciência Emocional</h3>
+<p class="text-text-body-light dark:text-slate-400 text-sm leading-relaxed font-normal font-sans font-light">
+                                Gestão inteligente dos sentimentos para transformar reatividade em escolha consciente.
+                            </p>
+</div>
+</div>
+<div class="reveal-child group bg-white dark:bg-card-dark p-6 rounded-xl shadow-sm hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 flex items-start gap-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors group-hover:bg-slate-200 dark:group-hover:bg-slate-600">
+<span class="material-symbols-outlined text-2xl">self_improvement</span>
+</div>
+<div>
+<h3 class="text-lg text-text-heading-light dark:text-white mb-2 group-hover:text-primary transition-colors tracking-premium font-display font-thin">Espiritualidade Prática</h3>
+<p class="text-text-body-light dark:text-slate-400 text-sm leading-relaxed font-normal font-sans font-light">
+                                Conexão com o propósito maior de forma não dogmática, integrando valores profundos ao seu dia a dia.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="relative w-full h-px bg-transparent py-3">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent h-px opacity-70 shadow-[0_0_15px_rgba(255,193,7,0.5)]"></div>
+</div>
+<section class="py-20 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 transition-colors duration-300 relative overflow-hidden overflow-visible" id="countdown">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-100/50 dark:to-slate-900/50 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal-on-scroll">
+<div class="text-center mb-12">
+<span class="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 block">O tempo está correndo</span>
+<h3 class="font-display text-3xl text-text-heading-light dark:text-white font-thin">Sua transformação começa em:</h3>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-6 md:gap-12" id="timer-display">
+<div class="countdown-item flex flex-col items-center bg-white dark:bg-slate-800/50 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-2xl p-6 min-w-[120px] md:min-w-[160px] shadow-lg">
+<span class="font-display text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-700 dark:from-yellow-200 dark:to-yellow-500 leading-none mb-2 font-thin" id="days">00</span>
+<span class="text-xs md:text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Dias</span>
+</div>
+<div class="countdown-item flex flex-col items-center bg-white dark:bg-slate-800/50 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-2xl p-6 min-w-[120px] md:min-w-[160px] shadow-lg">
+<span class="font-display text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-700 dark:from-yellow-200 dark:to-yellow-500 leading-none mb-2 font-thin" id="hours">00</span>
+<span class="text-xs md:text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Horas</span>
+</div>
+<div class="countdown-item flex flex-col items-center bg-white dark:bg-slate-800/50 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-2xl p-6 min-w-[120px] md:min-w-[160px] shadow-lg">
+<span class="font-display text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-700 dark:from-yellow-200 dark:to-yellow-500 leading-none mb-2 font-thin" id="minutes">00</span>
+<span class="text-xs md:text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Minutos</span>
+</div>
+<div class="countdown-item flex flex-col items-center bg-white dark:bg-slate-800/50 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-2xl p-6 min-w-[120px] md:min-w-[160px] shadow-lg">
+<span class="font-display text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-700 dark:from-yellow-200 dark:to-yellow-500 leading-none mb-2 font-thin" id="seconds">00</span>
+<span class="text-xs md:text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Segundos</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB] dark:from-slate-900 dark:to-background-dark relative overflow-hidden transition-colors duration-300" id="schedule">
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute -left-40 top-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] animate-float"></div>
+<div class="absolute -right-40 bottom-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] animate-float-delayed"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16 reveal-on-scroll">
+<p class="text-primary font-bold tracking-[0.2em] uppercase mb-4 text-sm font-sans font-light leading-relaxed">Cronograma</p>
+<h2 class="font-display text-4xl lg:text-5xl text-text-heading-light dark:text-white mb-6 tracking-premium-wide font-thin text-balance">Programação Completa</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="reveal-group flex flex-col gap-6">
+<div class="text-center mb-4">
+<h3 class="text-2xl text-text-heading-light dark:text-white font-display font-thin">Dia 01</h3>
+<p class="text-primary text-sm font-medium uppercase tracking-widest font-sans font-light leading-relaxed">16 de Maio</p>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">09:00</span>
+<span class="material-symbols-outlined text-primary/80">psychology</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Reengenharia Neural: A Base</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<img alt="Dr. Roberto" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2XXU2cfqeNaW8xhGNGj8KsX7qzBNKDzhRVsuE9T-WwpnED5O-m3m2rRB6jUE5lzScEDE29M5bZ8ytANAipJl25kg7jFL8K5XQLpPYU_6E2BfuX16ZYOVtl45mrPAgaczi4AUgmMfcpuyhmdm7SjDPPxyi_5HT-RXelnNoknJFU13H6W4UHxlZfQyjIOcPKjTwczG0-xhMYk4Uz5YYItE_ZrzL4UzmDYv6y5jGZdOX5oYOQcCOCsYhxvIc3cJ7zMKBtS4QapzPkQ"/>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Dr. Roberto Almeida</span>
+</div>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">14:00</span>
+<span class="material-symbols-outlined text-primary/80">visibility</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Mapeamento de Padrões</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<img alt="Dra. Helena" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Dra. Helena Costa</span>
+</div>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">18:00</span>
+<span class="material-symbols-outlined text-primary/80">diversity_3</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Vivência de Conexão</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<div class="flex -space-x-2">
+<img alt="Mentor" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2XXU2cfqeNaW8xhGNGj8KsX7qzBNKDzhRVsuE9T-WwpnED5O-m3m2rRB6jUE5lzScEDE29M5bZ8ytANAipJl25kg7jFL8K5XQLpPYU_6E2BfuX16ZYOVtl45mrPAgaczi4AUgmMfcpuyhmdm7SjDPPxyi_5HT-RXelnNoknJFU13H6W4UHxlZfQyjIOcPKjTwczG0-xhMYk4Uz5YYItE_ZrzL4UzmDYv6y5jGZdOX5oYOQcCOCsYhxvIc3cJ7zMKBtS4QapzPkQ"/>
+<img alt="Mentor" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+</div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Time de Mentores</span>
+</div>
+</div>
+</div>
+<div class="reveal-group flex flex-col gap-6 lg:mt-12">
+<div class="text-center mb-4">
+<h3 class="text-2xl text-text-heading-light dark:text-white font-display font-thin">Dia 02</h3>
+<p class="text-primary text-sm font-medium uppercase tracking-widest font-sans font-light leading-relaxed">17 de Maio</p>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">09:00</span>
+<span class="material-symbols-outlined text-primary/80">healing</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Criança Interior e Traumas</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<img alt="Dra. Helena" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Dra. Helena Costa</span>
+</div>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">14:00</span>
+<span class="material-symbols-outlined text-primary/80">trending_up</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Desbloqueio de Performance</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<img alt="Carlos Mendez" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fGZb1fxdZiofoN8Iq_0JKUo6ZmXAa6VlaZZAgQvopes7FvBrR81XhaOXSD1fcnAdn4k-1F2iyqjnUVJSos3G4B75LMyj9T6sJUJ0qErOvQABIgTQt4k40cm4BBw8aMNyuXkyO8NZZou4RhBkA2TbArGlfZjgqZDjcMq9uSFhO_xN9N47xmI47Knqk941fin2rq37xeGrD53YFZbdzzx9MkEvaXlotu6MUYt5i-KEjaUxbgJyxdAoGwLhFiLdxY1NkHnOUWvIMH4"/>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Carlos Mendez</span>
+</div>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">20:00</span>
+<span class="material-symbols-outlined text-primary/80">nightlight</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Jantar Sensorial</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<div class="w-8 h-8 rounded-full bg-slate-700 border border-primary/50 flex items-center justify-center">
+<span class="material-icons text-xs text-primary">restaurant</span>
+</div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Experiência Exclusiva</span>
+</div>
+</div>
+</div>
+<div class="reveal-group flex flex-col gap-6">
+<div class="text-center mb-4">
+<h3 class="text-2xl text-text-heading-light dark:text-white font-display font-thin">Dia 03</h3>
+<p class="text-primary text-sm font-medium uppercase tracking-widest font-sans font-light leading-relaxed">18 de Maio</p>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">09:00</span>
+<span class="material-symbols-outlined text-primary/80">rocket_launch</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Plano de Ação Futura</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<img alt="Carlos Mendez" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fGZb1fxdZiofoN8Iq_0JKUo6ZmXAa6VlaZZAgQvopes7FvBrR81XhaOXSD1fcnAdn4k-1F2iyqjnUVJSos3G4B75LMyj9T6sJUJ0qErOvQABIgTQt4k40cm4BBw8aMNyuXkyO8NZZou4RhBkA2TbArGlfZjgqZDjcMq9uSFhO_xN9N47xmI47Knqk941fin2rq37xeGrD53YFZbdzzx9MkEvaXlotu6MUYt5i-KEjaUxbgJyxdAoGwLhFiLdxY1NkHnOUWvIMH4"/>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Carlos Mendez</span>
+</div>
+</div>
+<div class="reveal-child schedule-card-glass p-6 rounded-2xl transition-all duration-300 group hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20">11:00</span>
+<span class="material-symbols-outlined text-primary/80">diamond</span>
+</div>
+<h4 class="text-lg font-bold text-text-heading-light dark:text-white mb-3">Encerramento &amp; Celebração</h4>
+<div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
+<div class="flex -space-x-2">
+<img alt="Mentor" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2XXU2cfqeNaW8xhGNGj8KsX7qzBNKDzhRVsuE9T-WwpnED5O-m3m2rRB6jUE5lzScEDE29M5bZ8ytANAipJl25kg7jFL8K5XQLpPYU_6E2BfuX16ZYOVtl45mrPAgaczi4AUgmMfcpuyhmdm7SjDPPxyi_5HT-RXelnNoknJFU13H6W4UHxlZfQyjIOcPKjTwczG0-xhMYk4Uz5YYItE_ZrzL4UzmDYv6y5jGZdOX5oYOQcCOCsYhxvIc3cJ7zMKBtS4QapzPkQ"/>
+<img alt="Mentor" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJlGzJ7s-Db5tlTmpn9hKxr0f51d_LiTFB7l6AM4OXQlL3ls_XmHzNoj6d_S1busegwrlTV89dCMnc0Dc-xp__vZ86P-xhSjRl5XK6o0Fjocj7_OCKUOyo5dMMRUUC-kWDGDFp6gUEG1ODZSRQyurYsZc6dTSMe9lntvjWMjXsFj5Rluv2QKYpUdykLwdAgM2HdYZDrhEcP_lr59792MzWijquifRtKfTKHxQdwEuRgpNz9YVCu44zTMtz_ar4VhpPDogNjG_WjU"/>
+<img alt="Mentor" class="w-8 h-8 rounded-full object-cover border border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fGZb1fxdZiofoN8Iq_0JKUo6ZmXAa6VlaZZAgQvopes7FvBrR81XhaOXSD1fcnAdn4k-1F2iyqjnUVJSos3G4B75LMyj9T6sJUJ0qErOvQABIgTQt4k40cm4BBw8aMNyuXkyO8NZZou4RhBkA2TbArGlfZjgqZDjcMq9uSFhO_xN9N47xmI47Knqk941fin2rq37xeGrD53YFZbdzzx9MkEvaXlotu6MUYt5i-KEjaUxbgJyxdAoGwLhFiLdxY1NkHnOUWvIMH4"/>
+</div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Todos os Mentores</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-background-light dark:bg-slate-900 transition-colors duration-300" id="investment">
+<div class="mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll max-w-5xl">
+<div class="text-center mb-16">
+<p class="text-primary font-bold tracking-[0.2em] uppercase mb-4 text-sm font-sans font-light leading-relaxed">Investimento e Inclusões</p>
+<h2 class="font-display text-3xl lg:text-5xl text-text-heading-light dark:text-white mb-6 tracking-premium-wide font-thin text-balance">
+                    Uma decisão de valor incalculável
+                </h2>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-yellow-300 to-amber-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative bg-white dark:bg-card-dark rounded-xl shadow-2xl p-8 lg:p-12 border border-yellow-200 dark:border-yellow-900/50 flex flex-col items-center text-center transition-colors duration-300">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full border border-primary/20 uppercase tracking-widest">Premium</span>
+</div>
+<h3 class="font-display text-2xl text-slate-600 dark:text-slate-300 mb-6 tracking-premium font-thin">Valor Integral</h3>
+<div class="mb-10 text-center">
+<span class="block text-sm font-semibold tracking-[0.3em] text-slate-500 dark:text-slate-400 uppercase mb-2">Investimento</span>
+<div class="font-display text-6xl lg:text-9xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 drop-shadow-sm tracking-tight leading-none flex items-start justify-center gap-2 font-thin">
+<span class="text-3xl lg:text-5xl font-semibold text-yellow-500 mt-2 lg:mt-4">R$</span>
+<span class="-ml-1">4.750,00</span>
+</div>
+</div>
+<div class="w-full h-px bg-slate-100 dark:bg-slate-700 mb-8"></div>
+<ul class="space-y-4 text-left w-full max-w-md mx-auto mb-10">
+<li class="flex items-center text-slate-700 dark:text-slate-200 text-lg font-medium">
+<span class="material-icons text-green-500 mr-3 font-sans font-light">check_circle</span>
+                            Hospedagem
+                        </li>
+<li class="flex items-center text-slate-700 dark:text-slate-200 text-lg font-medium">
+<span class="material-icons text-green-500 mr-3 font-sans font-light">check_circle</span>
+                            Transfer Recife → Gravatá → Recife
+                        </li>
+<li class="flex items-center text-slate-700 dark:text-slate-200 text-lg font-medium">
+<span class="material-icons text-green-500 mr-3 font-sans font-light">check_circle</span>
+                            Todas as refeições
+                        </li>
+<li class="flex items-center text-slate-700 dark:text-slate-200 text-lg font-medium">
+<span class="material-icons text-green-500 mr-3 font-sans font-light">check_circle</span>
+                            Todos os coffee breaks
+                        </li>
+<li class="flex items-center text-slate-700 dark:text-slate-200 text-lg font-medium">
+<span class="material-icons text-green-500 mr-3 font-sans font-light">check_circle</span>
+                            Participação integral na Imersão
+                        </li>
+</ul>
+<div class="bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-100 dark:border-yellow-900/30 rounded-lg p-4 mb-10 w-full max-w-lg">
+<div class="flex items-center justify-center gap-2 text-yellow-800 dark:text-yellow-200 font-medium text-sm lg:text-base">
+<span class="material-icons text-yellow-600 dark:text-yellow-400">credit_card</span>
+                            Pagamento parcelado disponível diretamente na plataforma de inscrição
+                        </div>
+</div>
+<button class="btn-metallic-shine w-full sm:w-auto bg-primary text-slate-900 text-lg font-bold py-5 px-12 rounded-full hover:bg-white transition-all shadow-xl tracking-widest uppercase animate-cta-pulse">
+                        GARANTIR MINHA VAGA
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-white dark:bg-background-dark relative overflow-hidden transition-colors duration-300" id="venue">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full lg:w-1/2 reveal-on-scroll">
+<div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img alt="Hotel Fazenda Portal de Gravatá" class="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm8jxeFyL14LhPZYlK-YP95_9HV_XyZAzCz9d33kzrD3ggWdePUkdTOz8sK2MdxB-OUgBRWvai4AFh12WRud0mATcXRovsd7iIuRkIWcvQpz51Ck3h7pGn3CNDsXuJS0f_kLhjkqn7ke0zTiRwb6iEnvJ2Q3GLKGvGgt-OrL9odEcJhu3yOy30OvaXDz2XgjoKb0DJv8VF4rld2t313mgQgWVRTt2WYr1B06QDFvaSgu_MRBWYrq5_UhaxXGBmH2vbK9uGfKdPeRs"/>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="bg-primary/90 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">Local Exclusivo</span>
+<p class="text-white text-lg font-medium font-sans font-light leading-relaxed">Um refúgio para sua transformação</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 reveal-on-scroll">
+<h2 class="font-display text-4xl lg:text-5xl text-primary mb-4 tracking-premium-wide font-thin text-balance">Local do Evento</h2>
+<h3 class="font-display text-3xl text-text-heading-light dark:text-white mb-8 font-thin">Hotel Fazenda Portal de Gravatá</h3>
+<div class="space-y-6 text-lg text-text-body-light dark:text-slate-300 font-normal">
+<div class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">location_on</span>
+<div>
+<p class="font-bold text-text-heading-light dark:text-white mb-1 font-sans font-light leading-relaxed">Endereço</p>
+<p class="font-sans font-light leading-relaxed">BR 232, Km 82, Gravatá – Pernambuco – Brasil</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">phone</span>
+<div>
+<p class="font-bold text-text-heading-light dark:text-white mb-1 font-sans font-light leading-relaxed">Contato</p>
+<p class="font-sans font-light leading-relaxed">+55 (81) 3304-8888</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">language</span>
+<div>
+<p class="font-bold text-text-heading-light dark:text-white mb-1 font-sans font-light leading-relaxed">Website</p>
+<a class="text-primary hover:underline hover:text-yellow-400 transition-colors" href="#" target="_blank">Visitar site oficial</a>
+</div>
+</div>
+</div>
+<div class="mt-10 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg h-64 w-full grayscale hover:grayscale-0 transition-all duration-500">
+<iframe allowfullscreen="" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.434386762886!2d-35.54923232414705!3d-8.216664281738743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a44078693c3%3A0x6e268923055428!2sHotel%20Portal%20de%20Gravat%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1709400000000!5m2!1spt-BR!2sbr" style="border:0; filter: invert(90%) hue-rotate(180deg);"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-background-dark pt-20 pb-0 overflow-hidden overflow-visible" id="cta">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal-on-scroll pb-24">
+<h2 class="font-display text-3xl md:text-5xl text-white mb-8 tracking-premium-wide font-thin text-balance">
+                Sua transformação começa em Recife.
+            </h2>
+<p class="text-gray-400 mb-10 text-lg font-normal font-sans font-light leading-relaxed">
+                Garanta sua vaga para os dias 16, 17 e 18 de Maio de 2026.
+            </p>
+<button class="btn-metallic-shine bg-primary text-slate-900 text-lg font-bold py-4 px-12 rounded-full hover:bg-white hover:text-slate-900 transition-all shadow-[0_0_30px_rgba(255,193,7,0.3)] transform hover:scale-105 tracking-wide animate-cta-pulse">
+                QUERO ME INSCREVER
+            </button>
+</div>
+</section>
+<div class="bg-background-light dark:bg-background-dark reveal-on-scroll">
+<div class="relative w-full h-px max-w-2xl mx-auto px-4">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent h-[1px] opacity-40 shadow-[0_0_12px_rgba(235,168,19,0.4)]"></div>
+</div>
+</div><section class="py-24 lg:py-32 bg-background-light dark:bg-background-dark transition-colors duration-300 relative overflow-hidden" id="faq">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16 reveal-on-scroll">
+<p class="text-primary font-bold tracking-[0.2em] uppercase mb-4 text-sm font-sans font-light">Dúvidas Comuns</p>
+<h2 class="font-display text-4xl lg:text-5xl text-text-heading-light dark:text-white mb-6 tracking-premium-wide font-thin text-balance">Perguntas Frequentes</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+</div>
+<div class="space-y-4 reveal-group" id="faq-accordion"><!-- Tab Navigation -->
+<div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-800 pb-6">
+<button class="faq-tab-btn px-8 py-3 rounded-full font-display text-lg transition-all border border-primary bg-primary text-slate-900 font-bold shadow-lg shadow-primary/20" id="btn-logistics" onclick="switchFaqTab('logistics')">
+        Logística &amp; Local
+    </button>
+<button class="faq-tab-btn px-8 py-3 rounded-full font-display text-lg transition-all border border-gray-700 text-gray-400 hover:border-primary/50 hover:text-primary" id="btn-experience" onclick="switchFaqTab('experience')">
+        A Experiência
+    </button>
+</div>
+<!-- Logistics Tab Content -->
+<div class="faq-tab-pane space-y-4" id="tab-logistics"><!-- Q1: Política de Cancelamento -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">1. Qual é a política de cancelamento?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Sabemos que imprevistos podem acontecer. Cancelamentos solicitados com até 30 dias de antecedência terão direito à devolução de 70% do valor pago. Entre 29 e 15 dias antes do evento, será possível transferir a inscrição para outra pessoa indicada pelo participante ou manter crédito integral para próxima edição. Cancelamentos com menos de 15 dias de antecedência não terão reembolso, devido às reservas de hotel, alimentação e estrutura já contratadas. Nosso compromisso é com clareza, respeito e responsabilidade com todos os envolvidos.
+        </div>
+</div>
+</div>
+<!-- Q2: Inclusões -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">2. O que está incluso no valor da imersão?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            O investimento inclui: <span class="text-primary font-bold">Hospedagem</span> no hotel oficial do evento; <span class="text-primary font-bold">Transfer</span> Recife → Gravatá → Recife; Todas as <span class="text-primary font-bold">refeições</span> durante a imersão; Todos os <span class="text-primary font-bold">coffee breaks</span>; Participação integral nas atividades. Não há taxas ocultas. Tudo foi pensado para que você possa focar apenas na experiência.
+        </div>
+</div>
+</div>
+<!-- Q3: Transfer -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">3. Como funciona o transfer para Gravatá?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Haverá transfer oficial saindo de <span class="text-primary font-bold">Recife às 15h do dia 16 de maio</span>, com destino ao local da imersão em Gravatá. Ao final do evento, o retorno para Recife também será organizado em grupo. Os horários e ponto exato de encontro são enviados por e-mail aos inscritos com antecedência. Caso prefira ir por conta própria, também é possível — basta informar a organização.
+        </div>
+</div>
+</div>
+<!-- Q4: Local -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">4. Onde será realizada a imersão?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            A Imersão In-Pulso acontecerá no: <span class="text-primary font-bold">Portal de Gravatá</span>, BR 232, Km 82 – Gravatá, Pernambuco – Brasil. Hotel com estrutura confortável, natureza ao redor e ambiente propício para profundidade e silêncio.
+        </div>
+</div>
+</div>
+<!-- Q5: Mala -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">5. O que devo levar para a imersão?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Recomendamos trazer: <span class="text-primary font-bold">Roupas confortáveis</span> para práticas internas; Um <span class="text-primary font-bold">casaco leve</span> (especialmente para a noite); Roupas adequadas para clima de serra; Calçados confortáveis; Itens pessoais de higiene; Garrafa de água; Caderno para anotações (opcional). Não é necessário nenhum material técnico específico. O mais importante é trazer disposição e abertura.
+        </div>
+</div>
+</div>
+<!-- Q6: Práticas Corporais -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">6. Preciso levar algo especial para as práticas corporais?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            As práticas são conduzidas de forma <span class="text-primary font-bold">segura e acessível</span>. Não exigem experiência prévia nem preparo físico específico. Caso tenha alguma condição médica relevante, pedimos que informe previamente à organização.
+        </div>
+</div>
+</div></div>
+<!-- Experience Tab Content -->
+<div class="faq-tab-pane space-y-4 hidden" id="tab-experience"><!-- Q7: Valor -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">7. O valor da Imersão In-Pulso é alto?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Essa é uma pergunta legítima — e importante. A Imersão In-Pulso não foi criada como um evento pontual, mas como um <span class="text-primary font-bold">investimento em alinhamento interno</span>, algo que impacta decisões, relações e escolhas ao longo da vida. Muitas pessoas já investiram tempo e dinheiro em diversos cursos, terapias ou experiências, mas poucas tiveram a oportunidade de reorganizar profundamente o modo como funcionam por dentro. Aqui, o valor não está apenas nas horas da imersão, mas no que deixa de se repetir depois dela.
+        </div>
+</div>
+</div>
+<!-- Q8: Tempo -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">8. Não tenho muito tempo. A imersão exige muito da agenda?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            A Imersão In-Pulso foi pensada para pessoas reais, com rotinas cheias e responsabilidades. Mais do que “ocupar tempo”, ela propõe uma <span class="text-primary font-bold">pausa consciente</span> para rever o modo como você vive o tempo. Muitas pessoas que sentem falta de tempo estão, na verdade, presas ao piloto automático. A imersão ajuda a ganhar clareza, foco e presença, o que costuma gerar mais qualidade — e não mais peso — na sua rotina.
+        </div>
+</div>
+</div>
+<!-- Q9: Receio -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">9. Tenho receio de não estar pronto(a) ou de mexer com coisas profundas demais</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Esse receio é comum — e saudável. A Imersão In-Pulso não força processos, não expõe ninguém e não ultrapassa limites individuais. Tudo acontece em um ambiente de <span class="text-primary font-bold">segurança emocional</span>, respeito e cuidado, conduzido por facilitadores experientes. Estar pronto não significa não ter medo. Significa apenas não ignorar mais o chamado interno.
+        </div>
+</div>
+</div>
+<!-- Q10: Descobertas -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">10. E se eu descobrir coisas difíceis sobre mim?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Descobrir não é o mesmo que se perder. Na Imersão In-Pulso, consciência vem acompanhada de acolhimento, integração e cuidado. O objetivo não é abrir feridas, mas compreender padrões, dar nome ao que atua no inconsciente e ampliar o campo de escolha. <span class="text-primary font-bold">Consciência gera liberdade</span> — não peso.
+        </div>
+</div>
+</div>
+<!-- Q11: Experiência Prévia -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">11. Preciso ter experiência prévia com terapia, PNL ou espiritualidade?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Não. A Imersão In-Pulso foi desenhada para acolher pessoas em diferentes momentos da jornada pessoal. Os conceitos são apresentados de forma didática, acessível e vivencial, sem jargões acadêmicos ou espiritualidade dogmática. O mais importante não é o que você já sabe — é a <span class="text-primary font-bold">disposição para olhar para dentro</span> com honestidade.
+        </div>
+</div>
+</div>
+<!-- Q12: O que acontece -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">12. O que exatamente acontece durante a imersão?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Durante a Imersão In-Pulso, você vivencia: práticas de consciência emocional; exercícios de PNL aplicada; reflexões sobre padrões e scripts de vida; estados ampliados de consciência; momentos de integração, partilha e silêncio. Tudo isso acontece de forma <span class="text-primary font-bold">estruturada, ética e segura</span>, respeitando o ritmo individual e do grupo.
+        </div>
+</div>
+</div>
+<!-- Q13: Exposição -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">13. Vou precisar me expor em grupo?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Não existe exposição forçada. A participação acontece sempre dentro do nível de conforto e disponibilidade de cada pessoa. O grupo é um <span class="text-primary font-bold">espaço de escuta e respeito</span>, não de cobrança ou julgamento. Muitas vezes, apenas ouvir já provoca profundas transformações.
+        </div>
+</div>
+</div>
+<!-- Q14: Religião -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">14. A Imersão In-Pulso é religiosa ou espiritualista?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Não. A espiritualidade trabalhada na Imersão In-Pulso é vivencial, <span class="text-primary font-bold">laica e integrativa</span>, ligada ao sentido, à consciência e à experiência humana — não a crenças específicas. Pessoas de diferentes visões, crenças ou nenhuma crença participam com naturalidade.
+        </div>
+</div>
+</div>
+<!-- Q15: Efeitos -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">15. Os efeitos da imersão duram ou são apenas momentâneos?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            A Imersão In-Pulso não busca gerar euforia passageira. Ela atua no nível onde decisões são formadas e padrões se sustentam. Por isso, muitas pessoas relatam mudanças que continuam se desdobrando semanas e meses depois, no modo de pensar, sentir e agir. A <span class="text-primary font-bold">transformação é sustentada</span> porque é integrada.
+        </div>
+</div>
+</div>
+<!-- Q16: Momento -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">16. E se eu sentir que agora não é o momento?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            Respeitar o próprio tempo também é consciência. Se você sentir que essa não é a hora, está tudo bem. Você pode registrar seu interesse e aguardar uma próxima turma. A Imersão In-Pulso acontece quando existe <span class="text-primary font-bold">alinhamento interno</span>, não por pressão externa.
+        </div>
+</div>
+</div>
+<!-- Q17: É para mim? -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">17. Como sei se essa imersão é para mim?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed">
+            A Imersão In-Pulso costuma fazer sentido para quem: sente que entender já não basta; quer sair do piloto automático; busca <span class="text-primary font-bold">profundidade com aplicação prática</span>; deseja viver com mais presença, verdade e direção. Se algo em você se reconhece nisso, provavelmente essa experiência conversa com o seu momento.
+        </div>
+</div>
+</div>
+<!-- Q18: Dúvidas -->
+<div class="reveal-child border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden bg-white dark:bg-card-dark transition-all duration-300 hover:border-primary/50">
+<button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center group focus:outline-none">
+<span class="font-display text-lg text-text-heading-light dark:text-white group-hover:text-primary transition-colors font-thin">18. Ainda tenho dúvidas. Posso conversar com alguém?</span>
+<span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+<div class="px-6 pb-6 text-text-body-light dark:text-slate-400 font-sans font-light leading-relaxed flex flex-col gap-4">
+<p>Sim. Nossa equipe está disponível para conversar com você com calma e clareza.</p>
+<a class="inline-flex items-center justify-center gap-2 bg-whatsapp text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform w-fit" href="https://wa.me/">
+<i class="fab fa-whatsapp"></i> Falar com a equipe pelo WhatsApp
+            </a>
+</div>
+</div>
+</div></div>
+<script>(function() {
+        const container = document.getElementById('three-js-canvas');
+        if (!container) return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        const group = new THREE.Group();
+        scene.add(group);
+
+        const particlesCount = 1200; 
+        const particlesGeometry = new THREE.BufferGeometry();
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for(let i=0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 12;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.035,
+            color: '#eba813',
+            transparent: true,
+            opacity: 0.5
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        group.add(particlesMesh);
+
+        camera.position.z = 6;
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / 300;
+            mouseY = (e.clientY - window.innerHeight / 2) / 300;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            group.rotation.y += 0.0002;
+            group.rotation.x += 0.0001;
+            
+            camera.position.x += (mouseX*0.15 - camera.position.x) * 0.015;
+            camera.position.y += (-mouseY*0.15 - camera.position.y) * 0.015;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        const tl = gsap.timeline({ delay: 0.5 });
+        tl.to('#hero-content > *', { opacity: 1, y: 0, duration: 1.2, stagger: 0.2, ease: 'power4.out', startAt: { y: 40 } });
+    })();</script></div>
+</div>
+</section><footer class="bg-gray-950 text-gray-300 border-t border-gray-900 relative z-20 font-sans">
+<div class="border-b border-gray-900 bg-gray-950/50 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4 overflow-x-auto"><div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Realização</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Realização" class="footer-partner-logo h-12 w-auto object-contain" id="footer-logo-realizacao" src="{{DATA:IMAGE:REALIZACAO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Organização</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Organização" class="footer-partner-logo h-12 w-auto object-contain" id="footer-logo-organizacao" src="{{DATA:IMAGE:ORGANIZACAO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Apoio Técnico</span>
+<div class="h-16 w-48 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Apoio Técnico" class="footer-partner-logo h-12 w-auto object-contain" id="footer-logo-apoio" src="{{DATA:IMAGE:APOIO_LOGO}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+<div class="hidden md:block w-px h-16 bg-gray-800 self-center"></div>
+<div class="flex flex-col items-center md:items-start flex-shrink-0">
+<span class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 font-display font-thin">Incentivadores</span>
+<div class="flex gap-4">
+<div class="h-16 w-32 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Incentivador 1" class="footer-partner-logo h-12 w-auto object-contain" id="footer-logo-incentivador-1" src="{{DATA:IMAGE:INCENTIVADOR_1}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+<div class="h-16 w-32 bg-gray-800/50 rounded flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Logo Incentivador 2" class="footer-partner-logo h-12 w-auto object-contain" id="footer-logo-incentivador-2" src="{{DATA:IMAGE:INCENTIVADOR_2}}" style="max-width: 300px; max-height: 300px; width: auto; height: auto;"/>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons text-primary text-3xl">bolt</span>
+<span class="font-display text-xl uppercase tracking-wider text-white font-thin">
+                        Imersão <span class="text-primary">In-Pulso</span>
+</span>
+</div>
+<p class="text-sm text-gray-400 leading-relaxed font-sans font-light">
+                    Uma jornada profunda para reconfigurar padrões e transformar sua realidade através da neurociência e vivências práticas.
+                </p>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg mb-6 tracking-wide border-b border-primary/30 pb-2 inline-block">Links Úteis</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-primary transition-colors duration-300 flex items-center gap-2" href="#why-hard"><span class="w-1.5 h-1.5 bg-primary rounded-full font-sans font-light"></span>O Desafio</a></li>
+<li><a class="hover:text-primary transition-colors duration-300 flex items-center gap-2" href="#program"><span class="w-1.5 h-1.5 bg-primary rounded-full font-sans font-light"></span>Programação</a></li>
+<li><a class="hover:text-primary transition-colors duration-300 flex items-center gap-2" href="#investment"><span class="w-1.5 h-1.5 bg-primary rounded-full font-sans font-light"></span>Investimento</a></li>
+<li><a class="hover:text-primary transition-colors duration-300 flex items-center gap-2" href="#venue"><span class="w-1.5 h-1.5 bg-primary rounded-full font-sans font-light"></span>Local</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg mb-6 tracking-wide border-b border-primary/30 pb-2 inline-block">Redes Sociais</h4>
+<div class="flex gap-4">
+<a aria-label="Instagram" class="social-circle-btn bg-gray-800 hover:bg-gray-700 border-gray-700 hover:border-primary/50" href="#">
+<i class="fab fa-instagram text-lg"></i>
+</a>
+<a aria-label="LinkedIn" class="social-circle-btn bg-gray-800 hover:bg-gray-700 border-gray-700 hover:border-primary/50" href="#">
+<i class="fab fa-linkedin-in text-lg"></i>
+</a>
+<a aria-label="Facebook" class="social-circle-btn bg-gray-800 hover:bg-gray-700 border-gray-700 hover:border-primary/50" href="#">
+<i class="fab fa-facebook-f text-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg mb-6 tracking-wide border-b border-primary/30 pb-2 inline-block">Contato</h4>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-3 group">
+<span class="material-icons text-primary text-sm mt-1 group-hover:scale-110 transition-transform font-sans font-light">email</span>
+<span class="text-gray-400 group-hover:text-white transition-colors font-sans font-light">contato@imersaoinpulso.com.br</span>
+</li>
+<li class="flex items-start gap-3 group">
+<span class="material-icons text-primary text-sm mt-1 group-hover:scale-110 transition-transform font-sans font-light">phone</span>
+<span class="text-gray-400 group-hover:text-white transition-colors font-sans font-light">+55 (81) 99999-9999</span>
+</li>
+<li class="flex items-start gap-3 group">
+<i class="fab fa-whatsapp text-primary text-sm mt-1 group-hover:scale-110 transition-transform"></i>
+<span class="text-gray-400 group-hover:text-white transition-colors font-sans font-light">WhatsApp Oficial</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p class="mb-4 md:mb-0 font-sans font-light leading-relaxed">© 2026 Imersão In-Pulso. Todos os direitos reservados.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-white transition-colors" href="#">Privacidade</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+        // Function to toggle theme
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        // Initialize theme based on preference or system
+        function initTheme() {
+            const storedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+        // Add event listeners
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+        if (themeToggleMobileBtn) {
+            themeToggleMobileBtn.addEventListener('click', toggleTheme);
+        }
+        // Run initialization
+        initTheme();
+        // Parallax Effect
+        const heroBg = document.getElementById('hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.pageYOffset;
+                // Move background at 40% of scroll speed
+                heroBg.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+            });
+        }
+        // Reveal on Scroll functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-group');
+            const revealOnScroll = function() {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                revealElements.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add('is-visible');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            // Trigger once on load to show elements already in view
+            revealOnScroll();
+        });
+        // Countdown Timer Logic
+        function updateCountdown() {
+            const eventDate = new Date('May 16, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            if (distance < 0) {
+                document.getElementById('timer-display').innerHTML = '<div class="text-2xl font-bold text-primary">Evento Iniciado!</div>';
+                return;
+            }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Helper to add leading zero
+            const pad = (n) => n < 10 ? '0' + n : n;
+            document.getElementById('days').innerText = pad(days);
+            document.getElementById('hours').innerText = pad(hours);
+            document.getElementById('minutes').innerText = pad(minutes);
+            document.getElementById('seconds').innerText = pad(seconds);
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Run immediately
+        // Modal Logic
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('is-open');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        }
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('is-open');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+        }
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const openModals = document.querySelectorAll('.modal.is-open');
+                openModals.forEach(modal => {
+                    modal.classList.remove('is-open');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.querySelector('nav button .material-icons:contains("menu")')?.parentElement;
+        if (menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                const navLinks = document.querySelector('.hidden.md\\:flex.space-x-8');
+                navLinks.classList.toggle('hidden');
+                navLinks.classList.toggle('flex');
+                navLinks.classList.toggle('flex-col');
+                navLinks.classList.toggle('absolute');
+                navLinks.classList.toggle('top-20');
+                navLinks.classList.toggle('left-0');
+                navLinks.classList.toggle('w-full');
+                navLinks.classList.toggle('bg-background-light');
+                navLinks.classList.toggle('dark:bg-background-dark');
+                navLinks.classList.toggle('p-6');
+                navLinks.classList.toggle('space-x-0');
+                navLinks.classList.toggle('space-y-4');
+                navLinks.classList.toggle('border-b');
+                navLinks.classList.toggle('border-gray-200');
+                navLinks.classList.toggle('dark:border-gray-800');
+            });
+        }
+    });
+</script><script>document.addEventListener('DOMContentLoaded', function() {
+    const initAccordion = () => {
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
+        faqTriggers.forEach(trigger => {
+            // Remove existing listener to avoid duplicates if re-initialized
+            const newTrigger = trigger.cloneNode(true);
+            trigger.parentNode.replaceChild(newTrigger, trigger);
+
+            newTrigger.addEventListener('click', () => {
+                const content = newTrigger.nextElementSibling;
+                const icon = newTrigger.querySelector('.material-icons');
+                
+                // Close other open items in the same tab (optional, for accordion behavior)
+                const parentTab = newTrigger.closest('.faq-tab-pane');
+                parentTab.querySelectorAll('.faq-content').forEach(c => {
+                    if (c !== content) {
+                        c.style.maxHeight = null;
+                        c.previousElementSibling.querySelector('.material-icons').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    };
+
+    initAccordion();
+
+    // Update switchFaqTab to reset heights correctly
+    window.switchFaqTab = function(tabId) {
+        const panes = document.querySelectorAll('.faq-tab-pane');
+        const btns = document.querySelectorAll('.faq-tab-btn');
+        
+        panes.forEach(p => p.classList.add('hidden'));
+        const activePane = document.getElementById('tab-' + tabId);
+        activePane.classList.remove('hidden');
+        
+        btns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-slate-900', 'font-bold', 'shadow-lg', 'shadow-primary/20');
+            b.classList.add('border-gray-700', 'text-gray-400');
+        });
+        
+        const activeBtn = document.getElementById('btn-' + tabId);
+        activeBtn.classList.add('bg-primary', 'text-slate-900', 'font-bold', 'shadow-lg', 'shadow-primary/20');
+        activeBtn.classList.remove('border-gray-700', 'text-gray-400');
+
+        // Reset heights of all items in all tabs
+        document.querySelectorAll('.faq-content').forEach(content => {
+            content.style.maxHeight = null;
+        });
+        document.querySelectorAll('.faq-trigger .material-icons').forEach(icon => {
+            icon.style.transform = 'rotate(0deg)';
+        });
+    };
+});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+<script>(function() {
+        const container = document.getElementById('three-js-canvas');
+        if (!container) return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        const group = new THREE.Group();
+        scene.add(group);
+
+        const particlesCount = 1200; 
+        const particlesGeometry = new THREE.BufferGeometry();
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for(let i=0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 12;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.035,
+            color: '#eba813',
+            transparent: true,
+            opacity: 0.5
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        group.add(particlesMesh);
+
+        camera.position.z = 6;
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / 300;
+            mouseY = (e.clientY - window.innerHeight / 2) / 300;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            group.rotation.y += 0.0002;
+            group.rotation.x += 0.0001;
+            
+            camera.position.x += (mouseX*0.15 - camera.position.x) * 0.015;
+            camera.position.y += (-mouseY*0.15 - camera.position.y) * 0.015;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        const tl = gsap.timeline({ delay: 0.5 });
+        tl.to('#hero-content > *', { opacity: 1, y: 0, duration: 1.2, stagger: 0.2, ease: 'power4.out', startAt: { y: 40 } });
+    })();</script></body></html>
